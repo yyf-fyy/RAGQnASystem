@@ -8,10 +8,32 @@ import torch
 import py2neo
 import random
 import re
+import logging
+import sys
+import traceback
+
+def handle_uncaught_exception(exctype, value, tb):
+    logging.error("未捕获的异常:", exc_info=(exctype, value, tb))
+
+sys.excepthook = handle_uncaught_exception
+
+# 初始化日志记录配置
+logging.basicConfig(
+    level=logging.DEBUG,  # 设置日志级别为 DEBUG
+    format="%(asctime)s - %(levelname)s - %(message)s",  # 设置日志格式
+    filename="app.log",  # 日志保存文件名
+    filemode="w"  # 每次运行覆盖旧的日志内容
+)
+
+SERVICE_HOST = "202.118.19.61"
+SERVICE_PORT = "11434"
+
+client = ollama.Client(host=f"http://{SERVICE_HOST}:{SERVICE_PORT}")
 
 
 
-@st.cache_resource
+#@st.cache_resource
+@st.experimental_singleton
 def load_model(cache_model):
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     #加载ChatGLM模型
@@ -29,15 +51,22 @@ def load_model(cache_model):
     model_name = 'model/chinese-roberta-wwm-ext'
     bert_tokenizer = BertTokenizer.from_pretrained(model_name)
     bert_model = zwk.Bert_Model(model_name, hidden_size=128, tag_num=len(tag2idx), bi=True)
-    bert_model.load_state_dict(torch.load(f'model/{cache_model}.pt'))
-    
+    #bert_model.load_state_dict(torch.load(f'model/{cache_model}.pt'))
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    bert_model.load_state_dict(torch.load(f'model/{cache_model}.pt', map_location=device))
+
     bert_model = bert_model.to(device)
     bert_model.eval()
     return glm_tokenizer,glm_model,bert_tokenizer,bert_model,idx2tag,rule,tfidf_r,device
 
 
 
+
 def Intent_Recognition(query,choice):
+    host = "202.118.19.61"
+    port = "11434"
+    logging.info(f"Intent_Recognition 开始处理，地址: {host}:{port}, 模型: {choice}, 用户输入: {query}")
+    client = ollama.Client(host=f"http://{host}:{port}")
     prompt = f"""
 阅读下列提示，回答问题（问题在输入的最后）:
 当你试图识别用户问题中的查询意图时，你需要仔细分析问题，并在16个预定义的查询类别中一一进行判断。对于每一个类别，思考用户的问题是否含有与该类别对应的意图。如果判断用户的问题符合某个特定类别，就将该类别加入到输出列表中。这样的方法要求你对每一个可能的查询意图进行系统性的考虑和评估，确保没有遗漏任何一个可能的分类。
@@ -108,9 +137,22 @@ def Intent_Recognition(query,choice):
 输出的时候请确保输出内容都在**查询类别**中出现过。确保输出类别个数**不要超过5个**！确保你的解释和合乎逻辑的！注意，如果用户询问了有关疾病的问题，一般都要先介绍一下疾病，也就是有"查询疾病简介"这个需求。
 再次检查你的输出都包含在**查询类别**:"查询疾病简介"、"查询疾病病因"、"查询疾病预防措施"、"查询疾病治疗周期"、"查询治愈概率"、"查询疾病易感人群"、"查询疾病所需药品"、"查询疾病宜吃食物"、"查询疾病忌吃食物"、"查询疾病所需检查项目"、"查询疾病所属科目"、"查询疾病的症状"、"查询疾病的治疗方法"、"查询疾病的并发疾病"、"查询药品的生产商"。
 """
-    rec_result = ollama.generate(model=choice, prompt=prompt)['response']
-    print(f'意图识别结果:{rec_result}')
-    return rec_result
+    print(f"Intent_Recognition 使用的服务地址: {host}:{port}")
+
+    try:
+        # 使用指定的客户端和模型进行生成
+        response = client.chat(
+            model=choice,  # 使用传入的模型名称
+            messages=[{"role": "user", "content": prompt}],
+            options={"temperature": 0, "response_format": "json_object"}
+        )
+        rec_result = response["message"]["content"]  # 获取响应内容
+        print(f"意图识别结果: {rec_result}")
+        logging.info(f"意图识别成功，返回结果")
+        return rec_result
+    except Exception as e:
+        print(f"调用失败: {e}")
+        return None
     # response, _ = glm_model.chat(glm_tokenizer, prompt, history=[])
     # return response
 
@@ -291,7 +333,7 @@ def main(is_admin, usname):
             label='请选择大语言模型:',
             options=['Qwen 1.5', 'Llama2-Chinese']
         )
-        choice = 'qwen:32b' if selected_option == 'Qwen 1.5' else 'llama2-chinese:13b-chat-q8_0'
+        choice = 'qwen:32b' if selected_option == 'Qwen 1.5' else 'qwen2.5:32b'
 
         show_ent = show_int = show_prompt = False
         if is_admin:
@@ -310,7 +352,8 @@ def main(is_admin, usname):
             st.experimental_rerun()
 
     glm_tokenizer, glm_model, bert_tokenizer, bert_model, idx2tag, rule, tfidf_r, device = load_model(cache_model)
-    client = py2neo.Graph('http://localhost:7474', user='neo4j', password='wei8kang7.long', name='neo4j')
+    #client = py2neo.Graph('http://localhost:7474', user='neo4j', password='wei8kang7.long', name='neo4j')
+    client = py2neo.Graph("bolt://localhost:7687", auth=("neo4j", "neo4jneo4j"), name="neo4j")
 
     current_messages = st.session_state.messages[active_window_index]
 
@@ -329,14 +372,23 @@ def main(is_admin, usname):
                         st.write(message.get("prompt", ""))
 
     if query := st.chat_input("Ask me anything!", key=f"chat_input_{active_window_index}"):
+        logging.info(f"用户输入: ")
         current_messages.append({"role": "user", "content": query})
         with st.chat_message("user"):
             st.markdown(query)
+
+
 
         response_placeholder = st.empty()
         response_placeholder.text("正在进行意图识别...")
 
         query = current_messages[-1]["content"]
+        try:
+            print("正在测试 Ollama 服务连接...")
+            response = ollama.generate(model="qwen:32b", prompt="测试连接")
+            print("连接成功，返回结果:", response)
+        except Exception as e:
+            print(f"服务连接失败: {e}")
         response = Intent_Recognition(query, choice)
         response_placeholder.empty()
 
@@ -347,6 +399,7 @@ def main(is_admin, usname):
             last += chunk['message']['content']
             response_placeholder.markdown(last)
         response_placeholder.markdown("")
+        logging.debug(f"流式返回内容: {chunk['message']['content']}")  # 记录每段返回内容
 
         knowledge = re.findall(r'<提示>(.*?)</提示>', prompt)
         zhishiku_content = "\n".join([f"提示{idx + 1}, {kn}" for idx, kn in enumerate(knowledge) if len(kn) >= 3])

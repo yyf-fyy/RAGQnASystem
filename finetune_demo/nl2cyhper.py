@@ -6,6 +6,12 @@ import json
 import time
 os.chdir(os.path.dirname(__file__))#vscode要用
 import pandas as pd
+OLLAMA_HOST = "http://202.118.19.61"
+OLLAMA_PORT = "11434"
+OLLAMA_MODEL = "qwen:32b"
+
+# 全局 Ollama 客户端
+client = ollama.Client(host=f"{OLLAMA_HOST}:{OLLAMA_PORT}")
 def append_data_to_json(data, filename):
     with open(filename, 'a', encoding='utf-8') as file:  # 使用UTF-8编码打开文件
         json_data = json.dumps(data, ensure_ascii=False)  # 将字典转换为JSON字符串，保持中文等字符的正确显示

@@ -30,6 +30,8 @@ def import_disease_data(client,type,entity):
                            )
         client.create(node)
 
+
+
 def create_all_relationship(client,all_relationship):
     def create_relationship(client,type1, name1,relation, type2,name2):
         order = """match (a:%s{名称:"%s"}),(b:%s{名称:"%s"}) create (a)-[r:%s]->(b)"""%(type1,name1,type2,name2,relation)

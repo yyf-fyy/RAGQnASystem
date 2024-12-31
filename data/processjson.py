@@ -2,6 +2,12 @@ import os
 from tqdm import tqdm
 import json
 import ollama
+OLLAMA_HOST = "http://202.118.19.61"
+OLLAMA_PORT = "11434"
+OLLAMA_MODEL = "qwen:32b"
+
+# 初始化全局 client 对象
+client = ollama.Client(host=f"{OLLAMA_HOST}:{OLLAMA_PORT}")
 
 def get_cure_way_result(problem):
     prompt = f"""
