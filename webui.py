@@ -33,7 +33,7 @@ client = ollama.Client(host=f"http://{SERVICE_HOST}:{SERVICE_PORT}")
 
 
 #@st.cache_resource
-@st.experimental_singleton
+@st.cache_resource
 def load_model(cache_model):
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     #加载ChatGLM模型
@@ -333,7 +333,7 @@ def main(is_admin, usname):
             label='请选择大语言模型:',
             options=['Qwen 1.5', 'Llama2-Chinese']
         )
-        choice = 'qwen:32b' if selected_option == 'Qwen 1.5' else 'qwen2.5:32b'
+        choice = 'qwen2.5:32b' if selected_option == 'Qwen 1.5' else 'qwen2.5:32b'
 
         show_ent = show_int = show_prompt = False
         if is_admin:
