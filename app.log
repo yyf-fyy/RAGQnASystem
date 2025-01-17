@@ -1,0 +1,453 @@
+2025-01-17 22:28:54,710 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:28:54,710 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:29:05,434 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:29:05,434 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x00000000745EE320>
+2025-01-17 22:29:05,509 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:29:05,513 - DEBUG - [#1306] S: (Accepted)
+2025-01-17 22:29:05,513 - DEBUG - [#1306] C: <BOLT>
+2025-01-17 22:29:05,513 - DEBUG - [#1306] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:29:05,514 - DEBUG - [#1306] S: <PROTOCOL> 4.3
+2025-01-17 22:29:05,514 - DEBUG - [#1306] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:29:05,514 - DEBUG - [#1306] C: (Sent 118 bytes)
+2025-01-17 22:29:05,514 - DEBUG - [#1306] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-48', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:29:05,514 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000001F369F90> from thread <Thread(ScriptRunner.scriptThread, started 12924)>
+2025-01-17 22:29:05,514 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000001F369F90> does not belong to pool <py2neo.client.ConnectionPool object at 0x00000000745EE320>
+2025-01-17 22:29:05,514 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000001F369F90> acquired by thread <Thread(ScriptRunner.scriptThread, started 12924)>
+2025-01-17 22:29:05,515 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000001F369F90> from thread <Thread(ScriptRunner.scriptThread, started 12924)>
+2025-01-17 22:29:16,464 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:29:16,464 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:16,465 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:29:16,465 - DEBUG - [#1311] S: (Accepted)
+2025-01-17 22:29:16,465 - DEBUG - [#1311] C: <BOLT>
+2025-01-17 22:29:16,465 - DEBUG - [#1311] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:29:16,466 - DEBUG - [#1311] S: <PROTOCOL> 4.3
+2025-01-17 22:29:16,466 - DEBUG - [#1311] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:29:16,466 - DEBUG - [#1311] C: (Sent 118 bytes)
+2025-01-17 22:29:16,467 - DEBUG - [#1311] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-49', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:29:16,467 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> from thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:16,467 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> does not belong to pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:16,467 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> acquired by thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:16,467 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> from thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:16,467 - INFO - 用户输入: 
+2025-01-17 22:29:16,468 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:29:16,469 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000000001F36A3B0>
+2025-01-17 22:29:16,469 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:29:16,470 - DEBUG - send_request_headers.complete
+2025-01-17 22:29:16,470 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:29:16,470 - DEBUG - send_request_body.complete
+2025-01-17 22:29:16,471 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:29:16,472 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:29:16 GMT'), (b'Content-Length', b'41')])
+2025-01-17 22:29:16,473 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 404 Not Found"
+2025-01-17 22:29:16,473 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:29:16,473 - DEBUG - receive_response_body.complete
+2025-01-17 22:29:16,473 - DEBUG - response_closed.started
+2025-01-17 22:29:16,473 - DEBUG - response_closed.complete
+2025-01-17 22:29:16,473 - INFO - Intent_Recognition 开始处理，地址: localhost:11434, 模型: qwen2.5:32b, 用户输入: 咳嗽怎末办
+2025-01-17 22:29:16,473 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:29:16,474 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:29:16,744 - DEBUG - connect_tcp.started host='localhost' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:29:16,744 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000000078782590>
+2025-01-17 22:29:16,744 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:29:16,744 - DEBUG - send_request_headers.complete
+2025-01-17 22:29:16,745 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:29:16,745 - DEBUG - send_request_body.complete
+2025-01-17 22:29:16,745 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:29:18,376 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:29:18 GMT'), (b'Content-Length', b'579')])
+2025-01-17 22:29:18,377 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:29:18,377 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:29:18,377 - DEBUG - receive_response_body.complete
+2025-01-17 22:29:18,377 - DEBUG - response_closed.started
+2025-01-17 22:29:18,377 - DEBUG - response_closed.complete
+2025-01-17 22:29:18,377 - INFO - 意图识别成功，返回结果
+2025-01-17 22:29:18,519 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:29:18,519 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:18,519 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:18,519 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> acquired by thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:18,520 - DEBUG - [#1311] C: RUN "match (a:疾病{名称:'咳嗽'}) return a.疾病简介" {} {'db': 'neo4j'}
+2025-01-17 22:29:18,520 - DEBUG - [#1311] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:29:18,520 - DEBUG - [#1311] C: (Sent 89 bytes)
+2025-01-17 22:29:18,521 - DEBUG - [#1311] S: SUCCESS {'t_first': 1, 'fields': ['a.疾病简介']}
+2025-01-17 22:29:18,524 - DEBUG - [#1311] S: RECORD * 1
+2025-01-17 22:29:18,524 - DEBUG - [#1311] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 3, 'db': 'neo4j'}
+2025-01-17 22:29:18,525 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> from thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:18,525 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:29:18,525 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:18,525 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:18,525 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> acquired by thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:18,525 - DEBUG - [#1311] C: RUN "match (a:疾病{名称:'咳嗽'})-[r:疾病使用药品]->(b:药品) return b.名称" {} {'db': 'neo4j'}
+2025-01-17 22:29:18,525 - DEBUG - [#1311] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:29:18,525 - DEBUG - [#1311] C: (Sent 118 bytes)
+2025-01-17 22:29:18,526 - DEBUG - [#1311] S: SUCCESS {'t_first': 0, 'fields': ['b.名称']}
+2025-01-17 22:29:18,529 - DEBUG - [#1311] S: RECORD * 6
+2025-01-17 22:29:18,529 - DEBUG - [#1311] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 3, 'db': 'neo4j'}
+2025-01-17 22:29:18,529 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> from thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:18,529 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:29:18,529 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:18,529 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001F36ABF0>
+2025-01-17 22:29:18,529 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> acquired by thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:18,529 - DEBUG - [#1311] C: RUN "match (a:疾病{名称:'咳嗽'})-[r:治疗的方法]->(b:治疗方法) return b.名称" {} {'db': 'neo4j'}
+2025-01-17 22:29:18,529 - DEBUG - [#1311] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:29:18,529 - DEBUG - [#1311] C: (Sent 121 bytes)
+2025-01-17 22:29:18,530 - DEBUG - [#1311] S: SUCCESS {'t_first': 1, 'fields': ['b.名称']}
+2025-01-17 22:29:18,532 - DEBUG - [#1311] S: RECORD * 2
+2025-01-17 22:29:18,532 - DEBUG - [#1311] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:29:18,532 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004AF8D930> from thread <Thread(ScriptRunner.scriptThread, started 12884)>
+2025-01-17 22:29:18,533 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:29:18,533 - DEBUG - send_request_headers.complete
+2025-01-17 22:29:18,534 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:29:18,534 - DEBUG - send_request_body.complete
+2025-01-17 22:29:18,534 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:29:18,535 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:29:18 GMT'), (b'Content-Length', b'65')])
+2025-01-17 22:29:18,536 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-01-17 22:29:18,536 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:29:18,536 - DEBUG - receive_response_body.complete
+2025-01-17 22:29:18,536 - DEBUG - response_closed.started
+2025-01-17 22:29:18,536 - DEBUG - response_closed.complete
+2025-01-17 22:31:43,440 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:31:43,440 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:43,440 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:31:43,441 - DEBUG - [#0E1F] S: (Accepted)
+2025-01-17 22:31:43,441 - DEBUG - [#0E1F] C: <BOLT>
+2025-01-17 22:31:43,441 - DEBUG - [#0E1F] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:31:43,442 - DEBUG - [#0E1F] S: <PROTOCOL> 4.3
+2025-01-17 22:31:43,442 - DEBUG - [#0E1F] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:31:43,442 - DEBUG - [#E1F] C: (Sent 118 bytes)
+2025-01-17 22:31:43,443 - DEBUG - [#0E1F] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-50', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:31:43,443 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> from thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:43,443 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> does not belong to pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:43,443 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> acquired by thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:43,443 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> from thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:43,444 - INFO - 用户输入: 
+2025-01-17 22:31:43,445 - DEBUG - close.started
+2025-01-17 22:31:43,445 - DEBUG - close.complete
+2025-01-17 22:31:43,445 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:31:43,446 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000000078783070>
+2025-01-17 22:31:43,446 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:31:43,446 - DEBUG - send_request_headers.complete
+2025-01-17 22:31:43,446 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:31:43,447 - DEBUG - send_request_body.complete
+2025-01-17 22:31:43,447 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:31:43,828 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:31:43 GMT'), (b'Content-Length', b'544')])
+2025-01-17 22:31:43,828 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-01-17 22:31:43,828 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:31:43,828 - DEBUG - receive_response_body.complete
+2025-01-17 22:31:43,828 - DEBUG - response_closed.started
+2025-01-17 22:31:43,828 - DEBUG - response_closed.complete
+2025-01-17 22:31:43,829 - INFO - Intent_Recognition 开始处理，地址: localhost:11434, 模型: qwen2.5:32b, 用户输入: 咳嗽怎末办
+2025-01-17 22:31:43,829 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:31:43,829 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:31:44,382 - DEBUG - connect_tcp.started host='localhost' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:31:44,383 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000000078783D00>
+2025-01-17 22:31:44,383 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:31:44,383 - DEBUG - send_request_headers.complete
+2025-01-17 22:31:44,383 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:31:44,383 - DEBUG - send_request_body.complete
+2025-01-17 22:31:44,384 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:31:47,110 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:31:47 GMT'), (b'Content-Length', b'581')])
+2025-01-17 22:31:47,110 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:31:47,110 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:31:47,110 - DEBUG - receive_response_body.complete
+2025-01-17 22:31:47,110 - DEBUG - response_closed.started
+2025-01-17 22:31:47,110 - DEBUG - response_closed.complete
+2025-01-17 22:31:47,111 - INFO - 意图识别成功，返回结果
+2025-01-17 22:31:47,255 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:31:47,256 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:47,256 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:47,256 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> acquired by thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:47,256 - DEBUG - [#0E1F] C: RUN "match (a:疾病{名称:'咳嗽'}) return a.疾病简介" {} {'db': 'neo4j'}
+2025-01-17 22:31:47,256 - DEBUG - [#0E1F] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:31:47,256 - DEBUG - [#E1F] C: (Sent 89 bytes)
+2025-01-17 22:31:47,257 - DEBUG - [#0E1F] S: SUCCESS {'t_first': 1, 'fields': ['a.疾病简介']}
+2025-01-17 22:31:47,259 - DEBUG - [#0E1F] S: RECORD * 1
+2025-01-17 22:31:47,259 - DEBUG - [#0E1F] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:31:47,259 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> from thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:47,259 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:31:47,260 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:47,260 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:47,260 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> acquired by thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:47,260 - DEBUG - [#0E1F] C: RUN "match (a:疾病{名称:'咳嗽'})-[r:疾病使用药品]->(b:药品) return b.名称" {} {'db': 'neo4j'}
+2025-01-17 22:31:47,260 - DEBUG - [#0E1F] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:31:47,260 - DEBUG - [#E1F] C: (Sent 118 bytes)
+2025-01-17 22:31:47,260 - DEBUG - [#0E1F] S: SUCCESS {'t_first': 0, 'fields': ['b.名称']}
+2025-01-17 22:31:47,263 - DEBUG - [#0E1F] S: RECORD * 6
+2025-01-17 22:31:47,263 - DEBUG - [#0E1F] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 3, 'db': 'neo4j'}
+2025-01-17 22:31:47,263 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> from thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:47,263 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:31:47,263 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:47,263 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004B82F9D0>
+2025-01-17 22:31:47,263 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> acquired by thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:47,263 - DEBUG - [#0E1F] C: RUN "match (a:疾病{名称:'咳嗽'})-[r:治疗的方法]->(b:治疗方法) return b.名称" {} {'db': 'neo4j'}
+2025-01-17 22:31:47,264 - DEBUG - [#0E1F] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:31:47,264 - DEBUG - [#E1F] C: (Sent 121 bytes)
+2025-01-17 22:31:47,264 - DEBUG - [#0E1F] S: SUCCESS {'t_first': 0, 'fields': ['b.名称']}
+2025-01-17 22:31:47,266 - DEBUG - [#0E1F] S: RECORD * 2
+2025-01-17 22:31:47,267 - DEBUG - [#0E1F] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:31:47,267 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000000078782590> from thread <Thread(ScriptRunner.scriptThread, started 4652)>
+2025-01-17 22:31:47,267 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:31:47,267 - DEBUG - send_request_headers.complete
+2025-01-17 22:31:47,267 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:31:47,267 - DEBUG - send_request_body.complete
+2025-01-17 22:31:47,267 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:31:47,957 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Fri, 17 Jan 2025 14:31:47 GMT'), (b'Transfer-Encoding', b'chunked')])
+2025-01-17 22:31:47,957 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:31:47,958 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:31:53,108 - DEBUG - receive_response_body.complete
+2025-01-17 22:31:53,108 - DEBUG - response_closed.started
+2025-01-17 22:31:53,108 - DEBUG - response_closed.complete
+2025-01-17 22:31:53,109 - DEBUG - 流式返回内容: 
+2025-01-17 22:32:08,875 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:32:08,875 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:08,875 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:32:08,876 - DEBUG - [#0E3C] S: (Accepted)
+2025-01-17 22:32:08,876 - DEBUG - [#0E3C] C: <BOLT>
+2025-01-17 22:32:08,876 - DEBUG - [#0E3C] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:32:08,877 - DEBUG - [#0E3C] S: <PROTOCOL> 4.3
+2025-01-17 22:32:08,877 - DEBUG - [#0E3C] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:32:08,877 - DEBUG - [#E3C] C: (Sent 118 bytes)
+2025-01-17 22:32:08,878 - DEBUG - [#0E3C] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-51', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:32:08,878 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> from thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:08,878 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> does not belong to pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:08,878 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> acquired by thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:08,878 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> from thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:08,880 - INFO - 用户输入: 
+2025-01-17 22:32:08,881 - DEBUG - close.started
+2025-01-17 22:32:08,881 - DEBUG - close.complete
+2025-01-17 22:32:08,882 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:32:08,882 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000000745D5FF0>
+2025-01-17 22:32:08,882 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:32:08,883 - DEBUG - send_request_headers.complete
+2025-01-17 22:32:08,883 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:32:08,883 - DEBUG - send_request_body.complete
+2025-01-17 22:32:08,883 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:32:09,237 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:32:09 GMT'), (b'Content-Length', b'523')])
+2025-01-17 22:32:09,238 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-01-17 22:32:09,238 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:32:09,238 - DEBUG - receive_response_body.complete
+2025-01-17 22:32:09,238 - DEBUG - response_closed.started
+2025-01-17 22:32:09,238 - DEBUG - response_closed.complete
+2025-01-17 22:32:09,238 - INFO - Intent_Recognition 开始处理，地址: localhost:11434, 模型: qwen2.5:32b, 用户输入: 得了癌症就会死吗
+2025-01-17 22:32:09,238 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:32:09,239 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:32:09,509 - DEBUG - connect_tcp.started host='localhost' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:32:09,510 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000000078781990>
+2025-01-17 22:32:09,510 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:32:09,510 - DEBUG - send_request_headers.complete
+2025-01-17 22:32:09,510 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:32:09,510 - DEBUG - send_request_body.complete
+2025-01-17 22:32:09,510 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:32:12,115 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:32:12 GMT'), (b'Content-Length', b'539')])
+2025-01-17 22:32:12,115 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:32:12,115 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:32:12,115 - DEBUG - receive_response_body.complete
+2025-01-17 22:32:12,115 - DEBUG - response_closed.started
+2025-01-17 22:32:12,115 - DEBUG - response_closed.complete
+2025-01-17 22:32:12,115 - INFO - 意图识别成功，返回结果
+2025-01-17 22:32:12,263 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:32:12,263 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:12,263 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:12,263 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> acquired by thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:12,263 - DEBUG - [#0E3C] C: RUN "match (a:疾病{名称:'癌症'}) return a.疾病简介" {} {'db': 'neo4j'}
+2025-01-17 22:32:12,263 - DEBUG - [#0E3C] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:32:12,264 - DEBUG - [#E3C] C: (Sent 89 bytes)
+2025-01-17 22:32:12,265 - DEBUG - [#0E3C] S: SUCCESS {'t_first': 0, 'fields': ['a.疾病简介']}
+2025-01-17 22:32:12,268 - DEBUG - [#0E3C] S: RECORD * 1
+2025-01-17 22:32:12,268 - DEBUG - [#0E3C] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:32:12,268 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> from thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:12,268 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:32:12,268 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:12,268 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:12,268 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> acquired by thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:12,268 - DEBUG - [#0E3C] C: RUN "match (a:疾病{名称:'癌症'}) return a.治愈概率" {} {'db': 'neo4j'}
+2025-01-17 22:32:12,268 - DEBUG - [#0E3C] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:32:12,268 - DEBUG - [#E3C] C: (Sent 89 bytes)
+2025-01-17 22:32:12,269 - DEBUG - [#0E3C] S: SUCCESS {'t_first': 1, 'fields': ['a.治愈概率']}
+2025-01-17 22:32:12,271 - DEBUG - [#0E3C] S: RECORD * 1
+2025-01-17 22:32:12,272 - DEBUG - [#0E3C] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:32:12,272 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> from thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:12,272 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:32:12,272 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:12,272 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000001FF72380>
+2025-01-17 22:32:12,272 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> acquired by thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:12,272 - DEBUG - [#0E3C] C: RUN "match (a:疾病{名称:'癌症'})-[r:治疗的方法]->(b:治疗方法) return b.名称" {} {'db': 'neo4j'}
+2025-01-17 22:32:12,272 - DEBUG - [#0E3C] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:32:12,272 - DEBUG - [#E3C] C: (Sent 121 bytes)
+2025-01-17 22:32:12,279 - DEBUG - [#0E3C] S: SUCCESS {'t_first': 7, 'fields': ['b.名称']}
+2025-01-17 22:32:12,283 - DEBUG - [#0E3C] S: RECORD * 3
+2025-01-17 22:32:12,283 - DEBUG - [#0E3C] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 4, 'db': 'neo4j'}
+2025-01-17 22:32:12,283 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82E140> from thread <Thread(ScriptRunner.scriptThread, started 17812)>
+2025-01-17 22:32:12,284 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:32:12,284 - DEBUG - send_request_headers.complete
+2025-01-17 22:32:12,284 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:32:12,284 - DEBUG - send_request_body.complete
+2025-01-17 22:32:12,284 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:32:12,944 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Fri, 17 Jan 2025 14:32:12 GMT'), (b'Transfer-Encoding', b'chunked')])
+2025-01-17 22:32:12,944 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:32:12,944 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:32:15,316 - DEBUG - receive_response_body.complete
+2025-01-17 22:32:15,316 - DEBUG - response_closed.started
+2025-01-17 22:32:15,316 - DEBUG - response_closed.complete
+2025-01-17 22:32:15,317 - DEBUG - 流式返回内容: 
+2025-01-17 22:34:25,269 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:34:25,269 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x00000000745ED4B0>
+2025-01-17 22:34:25,269 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:34:25,270 - DEBUG - [#1932] S: (Accepted)
+2025-01-17 22:34:25,270 - DEBUG - [#1932] C: <BOLT>
+2025-01-17 22:34:25,270 - DEBUG - [#1932] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:34:25,271 - DEBUG - [#1932] S: <PROTOCOL> 4.3
+2025-01-17 22:34:25,271 - DEBUG - [#1932] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:34:25,271 - DEBUG - [#1932] C: (Sent 118 bytes)
+2025-01-17 22:34:25,272 - DEBUG - [#1932] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-52', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:34:25,272 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x00000000745DFC40> from thread <Thread(ScriptRunner.scriptThread, started 5868)>
+2025-01-17 22:34:25,272 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x00000000745DFC40> does not belong to pool <py2neo.client.ConnectionPool object at 0x00000000745ED4B0>
+2025-01-17 22:34:25,272 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x00000000745DFC40> acquired by thread <Thread(ScriptRunner.scriptThread, started 5868)>
+2025-01-17 22:34:25,272 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x00000000745DFC40> from thread <Thread(ScriptRunner.scriptThread, started 5868)>
+2025-01-17 22:34:31,105 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:34:31,106 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000000077C96230>
+2025-01-17 22:34:31,106 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:34:31,106 - DEBUG - [#194E] S: (Accepted)
+2025-01-17 22:34:31,107 - DEBUG - [#194E] C: <BOLT>
+2025-01-17 22:34:31,107 - DEBUG - [#194E] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:34:31,107 - DEBUG - [#194E] S: <PROTOCOL> 4.3
+2025-01-17 22:34:31,107 - DEBUG - [#194E] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:34:31,108 - DEBUG - [#194E] C: (Sent 118 bytes)
+2025-01-17 22:34:31,108 - DEBUG - [#194E] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-53', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:34:31,108 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82F910> from thread <Thread(ScriptRunner.scriptThread, started 9412)>
+2025-01-17 22:34:31,108 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82F910> does not belong to pool <py2neo.client.ConnectionPool object at 0x0000000077C96230>
+2025-01-17 22:34:31,108 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82F910> acquired by thread <Thread(ScriptRunner.scriptThread, started 9412)>
+2025-01-17 22:34:31,108 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004B82F910> from thread <Thread(ScriptRunner.scriptThread, started 9412)>
+2025-01-17 22:34:31,110 - INFO - 用户输入: 
+2025-01-17 22:34:31,111 - DEBUG - close.started
+2025-01-17 22:34:31,111 - DEBUG - close.complete
+2025-01-17 22:34:31,111 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:34:31,112 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000000001F30E5C0>
+2025-01-17 22:34:31,112 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:34:31,112 - DEBUG - send_request_headers.complete
+2025-01-17 22:34:31,112 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:34:31,113 - DEBUG - send_request_body.complete
+2025-01-17 22:34:31,113 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:34:41,174 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:34:41 GMT'), (b'Content-Length', b'548')])
+2025-01-17 22:34:41,174 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-01-17 22:34:41,174 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:34:41,174 - DEBUG - receive_response_body.complete
+2025-01-17 22:34:41,174 - DEBUG - response_closed.started
+2025-01-17 22:34:41,174 - DEBUG - response_closed.complete
+2025-01-17 22:34:41,174 - INFO - Intent_Recognition 开始处理，地址: localhost:11434, 模型: qwen2:72b-instruct-q4_K_M, 用户输入: 介绍一下你自己
+2025-01-17 22:34:41,175 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:34:41,175 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:34:41,437 - DEBUG - connect_tcp.started host='localhost' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:34:41,438 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000000078782170>
+2025-01-17 22:34:41,438 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:34:41,438 - DEBUG - send_request_headers.complete
+2025-01-17 22:34:41,438 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:34:41,438 - DEBUG - send_request_body.complete
+2025-01-17 22:34:41,438 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:34:47,460 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:34:47 GMT'), (b'Content-Length', b'527')])
+2025-01-17 22:34:47,460 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:34:47,460 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:34:47,460 - DEBUG - receive_response_body.complete
+2025-01-17 22:34:47,460 - DEBUG - response_closed.started
+2025-01-17 22:34:47,460 - DEBUG - response_closed.complete
+2025-01-17 22:34:47,460 - INFO - 意图识别成功，返回结果
+2025-01-17 22:34:47,489 - DEBUG - close.started
+2025-01-17 22:34:47,490 - DEBUG - close.complete
+2025-01-17 22:34:47,490 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:34:47,490 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000000078783BE0>
+2025-01-17 22:34:47,490 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:34:47,490 - DEBUG - send_request_headers.complete
+2025-01-17 22:34:47,490 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:34:47,490 - DEBUG - send_request_body.complete
+2025-01-17 22:34:47,490 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:34:48,287 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Fri, 17 Jan 2025 14:34:48 GMT'), (b'Transfer-Encoding', b'chunked')])
+2025-01-17 22:34:48,287 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:34:48,287 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:34:48,758 - DEBUG - receive_response_body.complete
+2025-01-17 22:34:48,758 - DEBUG - response_closed.started
+2025-01-17 22:34:48,758 - DEBUG - response_closed.complete
+2025-01-17 22:34:48,758 - DEBUG - 流式返回内容: 
+2025-01-17 22:37:23,474 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:37:23,475 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:37:23,761 - DEBUG - Adding connection pool for profile ConnectionProfile('bolt://localhost:7687')
+2025-01-17 22:37:23,761 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004C7191B0>
+2025-01-17 22:37:23,762 - DEBUG - [#0000] C: (Dialing <localhost:7687>)
+2025-01-17 22:37:23,762 - DEBUG - [#3619] S: (Accepted)
+2025-01-17 22:37:23,762 - DEBUG - [#3619] C: <BOLT>
+2025-01-17 22:37:23,762 - DEBUG - [#3619] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+2025-01-17 22:37:23,763 - DEBUG - [#3619] S: <PROTOCOL> 4.3
+2025-01-17 22:37:23,763 - DEBUG - [#3619] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.10.16-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+2025-01-17 22:37:23,763 - DEBUG - [#3619] C: (Sent 118 bytes)
+2025-01-17 22:37:23,765 - DEBUG - [#3619] S: SUCCESS {'server': 'Neo4j/5.24.0', 'connection_id': 'bolt-54', 'hints': {'connection.recv_timeout_seconds': 120}}
+2025-01-17 22:37:23,765 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> from thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:23,765 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> does not belong to pool <py2neo.client.ConnectionPool object at 0x000000004C7191B0>
+2025-01-17 22:37:23,765 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> acquired by thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:23,765 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> from thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:23,768 - INFO - 用户输入: 
+2025-01-17 22:37:23,769 - DEBUG - close.started
+2025-01-17 22:37:23,769 - DEBUG - close.complete
+2025-01-17 22:37:23,769 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:37:23,769 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000000004C71B100>
+2025-01-17 22:37:23,770 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:37:23,770 - DEBUG - send_request_headers.complete
+2025-01-17 22:37:23,770 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:37:23,770 - DEBUG - send_request_body.complete
+2025-01-17 22:37:23,770 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:37:25,413 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:37:25 GMT'), (b'Content-Length', b'744')])
+2025-01-17 22:37:25,414 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-01-17 22:37:25,414 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:37:25,414 - DEBUG - receive_response_body.complete
+2025-01-17 22:37:25,414 - DEBUG - response_closed.started
+2025-01-17 22:37:25,414 - DEBUG - response_closed.complete
+2025-01-17 22:37:25,414 - INFO - Intent_Recognition 开始处理，地址: localhost:11434, 模型: qwen2:72b-instruct-q4_K_M, 用户输入: 得了癌症就会死吗
+2025-01-17 22:37:25,415 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-01-17 22:37:25,415 - DEBUG - load_verify_locations cafile='D:\\Anaconda\\envs\\RAGQnASystem\\lib\\site-packages\\certifi\\cacert.pem'
+2025-01-17 22:37:25,682 - DEBUG - connect_tcp.started host='localhost' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:37:25,682 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000000004C71AB30>
+2025-01-17 22:37:25,682 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:37:25,682 - DEBUG - send_request_headers.complete
+2025-01-17 22:37:25,682 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:37:25,683 - DEBUG - send_request_body.complete
+2025-01-17 22:37:25,683 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:37:31,189 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Fri, 17 Jan 2025 14:37:31 GMT'), (b'Content-Length', b'613')])
+2025-01-17 22:37:31,190 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:37:31,190 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:37:31,190 - DEBUG - receive_response_body.complete
+2025-01-17 22:37:31,190 - DEBUG - response_closed.started
+2025-01-17 22:37:31,190 - DEBUG - response_closed.complete
+2025-01-17 22:37:31,190 - INFO - 意图识别成功，返回结果
+2025-01-17 22:37:31,339 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:37:31,339 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000004C7191B0>
+2025-01-17 22:37:31,340 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004C7191B0>
+2025-01-17 22:37:31,340 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> acquired by thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:31,340 - DEBUG - [#3619] C: RUN "match (a:疾病{名称:'癌症'}) return a.疾病简介" {} {'db': 'neo4j'}
+2025-01-17 22:37:31,340 - DEBUG - [#3619] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:37:31,340 - DEBUG - [#3619] C: (Sent 89 bytes)
+2025-01-17 22:37:31,341 - DEBUG - [#3619] S: SUCCESS {'t_first': 1, 'fields': ['a.疾病简介']}
+2025-01-17 22:37:31,343 - DEBUG - [#3619] S: RECORD * 1
+2025-01-17 22:37:31,343 - DEBUG - [#3619] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:37:31,343 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> from thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:31,343 - DEBUG - Attempting to acquire read-write connection to 'neo4j'
+2025-01-17 22:37:31,343 - DEBUG - Using connection pool <py2neo.client.ConnectionPool object at 0x000000004C7191B0>
+2025-01-17 22:37:31,343 - DEBUG - Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000000004C7191B0>
+2025-01-17 22:37:31,343 - DEBUG - Connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> acquired by thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:31,343 - DEBUG - [#3619] C: RUN "match (a:疾病{名称:'癌症'}) return a.治愈概率" {} {'db': 'neo4j'}
+2025-01-17 22:37:31,343 - DEBUG - [#3619] C: PULL {'n': -1, 'qid': -1}
+2025-01-17 22:37:31,343 - DEBUG - [#3619] C: (Sent 89 bytes)
+2025-01-17 22:37:31,344 - DEBUG - [#3619] S: SUCCESS {'t_first': 1, 'fields': ['a.治愈概率']}
+2025-01-17 22:37:31,346 - DEBUG - [#3619] S: RECORD * 1
+2025-01-17 22:37:31,346 - DEBUG - [#3619] S: SUCCESS {'bookmark': 'FB:kcwQfcKDaqsIQ9OCbdjoNIARSMoABWA4kA==', 'type': 'r', 't_last': 2, 'db': 'neo4j'}
+2025-01-17 22:37:31,346 - DEBUG - Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000000004C718670> from thread <Thread(ScriptRunner.scriptThread, started 10416)>
+2025-01-17 22:37:31,347 - DEBUG - close.started
+2025-01-17 22:37:31,347 - DEBUG - close.complete
+2025-01-17 22:37:31,347 - DEBUG - connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2025-01-17 22:37:31,347 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000000001FF723B0>
+2025-01-17 22:37:31,347 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-01-17 22:37:31,347 - DEBUG - send_request_headers.complete
+2025-01-17 22:37:31,347 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-01-17 22:37:31,348 - DEBUG - send_request_body.complete
+2025-01-17 22:37:31,348 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-01-17 22:37:32,665 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Fri, 17 Jan 2025 14:37:32 GMT'), (b'Transfer-Encoding', b'chunked')])
+2025-01-17 22:37:32,665 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-17 22:37:32,665 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-01-17 22:37:39,649 - DEBUG - receive_response_body.complete
+2025-01-17 22:37:39,650 - DEBUG - response_closed.started
+2025-01-17 22:37:39,650 - DEBUG - response_closed.complete
+2025-01-17 22:37:39,650 - DEBUG - 流式返回内容: 
