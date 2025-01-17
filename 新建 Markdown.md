@@ -5,3 +5,7 @@ python build_up_graph.py --website bolt://localhost:7687 --user neo4j --password
 
 
 ssh -L 11434:202.118.19.61:11434 mayrain@202.118.19.61
+
+
+
+ssh -L 11434:202.118.11.9:11434 mayrain@202.118.11.9

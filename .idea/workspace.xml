@@ -28,8 +28,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.demo.executor": "Run",
+    "Python.streamlit.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "D:/Anaconda/envs/RAGQnASystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
@@ -80,7 +85,7 @@
       <workItem from="1735644857467" duration="2255000" />
       <workItem from="1735648177947" duration="10848000" />
       <workItem from="1735659749345" duration="5557000" />
-      <workItem from="1737125112621" duration="229000" />
+      <workItem from="1737125112621" duration="660000" />
     </task>
     <servers />
   </component>
@@ -92,5 +97,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RAGQnASystem$demo.coverage" NAME="demo 覆盖结果" MODIFIED="1735662648776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RAGQnASystem$streamlit.coverage" NAME="streamlit 覆盖结果" MODIFIED="1737125505986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
