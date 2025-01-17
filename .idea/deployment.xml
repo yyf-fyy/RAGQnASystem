@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
   <component name="PublishConfigData">
+=======
+  <component name="PublishConfigData" autoUpload="Always" serverName="mayrain@202.118.11.9:22 password (2)" remoteFilesAllowedToDisappearOnAutoupload="false">
+>>>>>>> Stashed changes
     <serverData>
       <paths name="mayrain@202.118.11.9:22 password">
         <serverdata>
           <mappings>
+<<<<<<< Updated upstream
             <mapping local="$PROJECT_DIR$" web="/" />
+=======
+            <mapping deploy="/tmp/pycharm_project_742" local="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
           </mappings>
         </serverdata>
       </paths>
       <paths name="mayrain@202.118.11.9:22 password (2)">
         <serverdata>
           <mappings>
+<<<<<<< Updated upstream
             <mapping local="$PROJECT_DIR$" web="/" />
+=======
+            <mapping deploy="/tmp/pycharm_project_904" local="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
           </mappings>
         </serverdata>
       </paths>
@@ -24,5 +36,9 @@
         </serverdata>
       </paths>
     </serverData>
+<<<<<<< Updated upstream
+=======
+    <option name="myAutoUpload" value="ALWAYS" />
+>>>>>>> Stashed changes
   </component>
 </project>

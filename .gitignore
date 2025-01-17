@@ -5,3 +5,4 @@ __pycache__/
 *.xml
 *.log
 *.log
+app.log
