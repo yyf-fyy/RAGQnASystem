@@ -330,7 +330,7 @@ def main(is_admin, usname):
 
         selected_option = st.selectbox(
             label='请选择大语言模型:',
-            options=['qwen2.5:32b', 'qwen2.5', 'qwen2:72b-instruct-q4_K_M']
+            options=['qwen2.5:32b', 'qwen2.5', 'qwen2:72b-instruct-q4_K_M', 'deepseek-r1']
         )
         # choice = 'qwen2.5:32b' if selected_option == 'Qwen 1.5' else 'qwen2.5:32b'
         # choice = 'qwen2.5:32b' if selected_option == 'qwen2.5:32b' else 'qwen2.5'
@@ -340,6 +340,8 @@ def main(is_admin, usname):
             choice = 'qwen2.5'
         elif selected_option == 'qwen2:72b-instruct-q4_K_M':
             choice = 'qwen2:72b-instruct-q4_K_M'
+        elif selected_option == 'deepseek-r1':
+            choice = 'deepseek-r1'
         else:
             choice = None  # 默认值，当选项不匹配时
 
@@ -426,4 +428,4 @@ def main(is_admin, usname):
 
     st.session_state.messages[active_window_index] = current_messages
     print("正在测试 Ollama 服务连接...")
-    response = ollama.generate(model="qwen2.5:32b", prompt="测试连接")
+    response = ollama.generate(model=choice, prompt="测试连接")

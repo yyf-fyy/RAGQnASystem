@@ -4,3 +4,5 @@ model/best_roberta_rnn_model_ent_aug.pt
 __pycache__/
 *.log
 *.log
+app.log
+/.idea
