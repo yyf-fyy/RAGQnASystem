@@ -11,6 +11,7 @@ import re
 import logging
 import sys
 import traceback
+import subprocess
 from db_tools import get_ollama_client, get_neo4j_client, OLLAMA_ADDRESS, OLLAMA_PORT
 
 
@@ -328,10 +329,54 @@ def main(is_admin, usname):
         selected_window = st.selectbox('请选择对话窗口:', window_options)
         active_window_index = int(selected_window.split()[1]) - 1
 
+
+        def get_running_ollama_models():
+            """
+            使用 `ollama ps` 命令获取当前已运行的模型
+            :return: 一个包含运行模型名称的列表
+            """
+            try:
+                result = subprocess.run(['ollama', 'ps'], capture_output=True, text=True, check=True)
+                running_models = []
+                for line in result.stdout.splitlines():
+                    if line.strip() and not line.lower().startswith('name') and not line.lower().startswith('status'):
+                        model_name = line.split()[0]
+                        running_models.append(model_name)
+                return running_models
+            except subprocess.CalledProcessError as e:
+                st.error(f"Error executing `ollama ps`: {e}")
+                return []
+            except FileNotFoundError:
+                st.error("`ollama` command not found. Make sure it is installed and added to PATH.")
+                return []
+
+        # 预设的模型列表
+        all_models = ['qwen2.5:32b', 'qwen2.5', 'qwen2:72b-instruct-q4_K_M', 'deepseek-r1:latest']
+
+        # 获取当前运行的模型
+        running_models = get_running_ollama_models()
+
+        # 筛选可用模型：如果模型存在于运行模型列表中，视为可用
+        available_models = [model for model in all_models if model in running_models]
+
+        # 设置默认值为第一个可用模型，如果没有可用模型，返回一个默认提示
+        default_model = available_models[0] if available_models else "无可用模型"
+
+        # Streamlit 界面
+        st.title("模型选择器")
+
         selected_option = st.selectbox(
             label='请选择大语言模型:',
-            options=['qwen2.5:32b', 'qwen2.5', 'qwen2:72b-instruct-q4_K_M', 'deepseek-r1']
+            options=all_models,
+            index=all_models.index(available_models[0]) if available_models else 0  # 如果没有可用模型，默认选择第一个
         )
+
+        # 根据选项显示状态
+        if selected_option == "无可用模型":
+            st.warning("当前没有可用模型，请检查运行状态。")
+        else:
+            st.success(f"已选择模型: {selected_option}")
+
         # choice = 'qwen2.5:32b' if selected_option == 'Qwen 1.5' else 'qwen2.5:32b'
         # choice = 'qwen2.5:32b' if selected_option == 'qwen2.5:32b' else 'qwen2.5'
         if selected_option == 'qwen2.5:32b':
@@ -340,8 +385,8 @@ def main(is_admin, usname):
             choice = 'qwen2.5'
         elif selected_option == 'qwen2:72b-instruct-q4_K_M':
             choice = 'qwen2:72b-instruct-q4_K_M'
-        elif selected_option == 'deepseek-r1':
-            choice = 'deepseek-r1'
+        elif selected_option == 'deepseek-r1:latest':
+            choice = 'deepseek-r1:latest'
         else:
             choice = None  # 默认值，当选项不匹配时
 
