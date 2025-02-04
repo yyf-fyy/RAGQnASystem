@@ -15,8 +15,8 @@ import subprocess
 from db_tools import get_ollama_client, get_neo4j_client, OLLAMA_ADDRESS, OLLAMA_PORT
 
 custom_client = get_ollama_client()
-ollama.generate = custom_client.generate
-ollama.chat = custom_client.chat
+# ollama.generate = custom_client.generate
+# ollama.chat = custom_client.chat
 
 
 def handle_uncaught_exception(exctype, value, tb):
