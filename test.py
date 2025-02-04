@@ -1,14 +1,15 @@
-import ollama
+from ollama._client import Client
+import ollama  # 导入 ollama 库
 
-# 初始化 Ollama 客户端
-OLLAMA_HOST = "http://202.118.11.9:11434"  # 替换为你的 Ollama 服务地址
-client = ollama.Client(host=OLLAMA_HOST)
+# 设置你要访问的服务器 IP 地址
+ollama_host = "http://192.168.2.79:11434"  # 替换为你的 Ollama 服务器 IP 地址
 
-# 调用 `models()` 方法获取已部署的模型列表
-try:
-    models = client.models()  # 获取模型列表
-    print("已部署的模型：")
-    for model in models:
-        print(f"- {model}")
-except Exception as e:
-    print(f"获取模型列表时出错：{e}")
+# 创建一个新的 Client 实例
+custom_client = Client(host=ollama_host)
+
+# 动态赋值 ollama.generate 为 custom_client.generate 方法
+ollama.generate = custom_client.generate
+
+# 示例调用 ollama.generate（方法名保持不变）
+response = ollama.generate(model="qwen2.5", prompt="Hello, how are you?")
+print(response)

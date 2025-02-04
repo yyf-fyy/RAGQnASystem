@@ -14,6 +14,10 @@ import traceback
 import subprocess
 from db_tools import get_ollama_client, get_neo4j_client, OLLAMA_ADDRESS, OLLAMA_PORT
 
+custom_client = get_ollama_client()
+ollama.generate = custom_client.generate
+ollama.chat = custom_client.chat
+
 
 def handle_uncaught_exception(exctype, value, tb):
     logging.error("未捕获的异常:", exc_info=(exctype, value, tb))
@@ -351,7 +355,7 @@ def main(is_admin, usname):
                 return []
 
         # 预设的模型列表
-        all_models = ['qwen2.5:32b', 'qwen2.5', 'qwen2:72b-instruct-q4_K_M', 'deepseek-r1:latest']
+        all_models = ['qwen2.5:32b', 'qwen2.5', 'qwen2:72b-instruct-q4_K_M', 'deepseek-r1:latest', 'deepseek-r1:70b']
 
         # 获取当前运行的模型
         running_models = get_running_ollama_models()
@@ -387,6 +391,8 @@ def main(is_admin, usname):
             choice = 'qwen2:72b-instruct-q4_K_M'
         elif selected_option == 'deepseek-r1:latest':
             choice = 'deepseek-r1:latest'
+        elif selected_option == 'deepseek-r1:70b':
+            choice = 'deepseek-r1:70b'
         else:
             choice = None  # 默认值，当选项不匹配时
 
@@ -473,4 +479,6 @@ def main(is_admin, usname):
 
     st.session_state.messages[active_window_index] = current_messages
     print("正在测试 Ollama 服务连接...")
+
     response = ollama.generate(model=choice, prompt="测试连接")
+

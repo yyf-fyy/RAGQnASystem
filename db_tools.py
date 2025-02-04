@@ -3,10 +3,10 @@ from py2neo import Graph
 
 # Ollama 和 Neo4j 的参数
 # OLLAMA_ADDRESS = "202.118.11.9"
-OLLAMA_ADDRESS = "localhost"# 地址
+OLLAMA_ADDRESS = "192.168.2.79"# 地址
 OLLAMA_PORT = "11434"            # 端口
 OLLAMA_HOST = f"http://{OLLAMA_ADDRESS}:{OLLAMA_PORT}"  # 拼接完整 URL
-NEO4J_HOST = "bolt://localhost:7687"
+NEO4J_HOST = "bolt://192.168.2.79:7687"
 NEO4J_AUTH = ("neo4j", "neo4jneo4j")
 NEO4J_NAME = "neo4j"
 

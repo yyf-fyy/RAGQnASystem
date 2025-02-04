@@ -30,6 +30,7 @@
     "Python.check_ollama.executor": "Run",
     "Python.demo.executor": "Run",
     "Python.streamlit.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "D:/Anaconda/envs/RAGQnASystem",
     "node.js.detected.package.eslint": "true",
@@ -74,6 +75,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="RAGQnASystem (3)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -88,9 +90,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAGQnASystem" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.streamlit" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.check_ollama" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.check_ollama" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -114,7 +144,15 @@
       <workItem from="1735659749345" duration="5557000" />
       <workItem from="1737125112621" duration="660000" />
       <workItem from="1737641144370" duration="36000" />
-      <workItem from="1737981670769" duration="3501000" />
+      <workItem from="1737981670769" duration="4604000" />
+      <workItem from="1738171041031" duration="1441000" />
+      <workItem from="1738573940326" duration="917000" />
+      <workItem from="1738577959261" duration="2866000" />
+      <workItem from="1738582286539" duration="4528000" />
+      <workItem from="1738631474183" duration="1331000" />
+      <workItem from="1738633601064" duration="2000" />
+      <workItem from="1738634992224" duration="864000" />
+      <workItem from="1738636175443" duration="1472000" />
     </task>
     <servers />
   </component>
@@ -125,8 +163,9 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RAGQnASystem$streamlit.coverage" NAME="streamlit 覆盖结果" MODIFIED="1737984778609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/RAGQnASystem$streamlit.coverage" NAME="streamlit 覆盖结果" MODIFIED="1738637647317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/RAGQnASystem$check_ollama.coverage" NAME="check_ollama 覆盖结果" MODIFIED="1737984326092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RAGQnASystem$test.coverage" NAME="test 覆盖结果" MODIFIED="1738637079056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RAGQnASystem$demo.coverage" NAME="demo 覆盖结果" MODIFIED="1735662648776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
